@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Data Management",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-02-28",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Properties of the Normal Distribution in Statistics, a Key Continuous Probability Distribution">
+    <title>Repeated sampling</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .list-group-item { border: 0px solid black; }
+      .breadcrumb { background-color: #5B0A9F; }
+      .breadcrumb > li > a { color: white; }
+      .well { background-color: #DCC4F8; }
+      .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+      .panel-default > .panel-heading { background-color: #DCC4F8; }
+      h1, h2, h3 { font-family: "Lucida Sans", sans-serif; }
+      .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top: 80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php"); ?>
+
+    <div class="container-fluid" style="margin-bottom: 30px;">
+      <br><br>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="#">Lessons</a></li>
+            <li><a href="#">Gr12</a></li>
+            <li><a href="#">Math</a></li>
+            <li><a href="#">Data Management</a></li>
+            <li><a href="#" style="font-weight: bold;">Repeated sampling</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1><b>Repeated Sampling</b></h1>
+              <p>
+                Repeated sampling is a method of collecting multiple samples from the same population to obtain a more accurate estimate of its true characteristics. A single sample may not always reflect the full picture due to random variation, so taking many samples helps reduce errors.
+              </p>
+              <p>
+                By calculating the average (mean) and spread (standard deviation) of multiple samples, statisticians can better estimate the real values in the population. This approach also minimizes the impact of unusual data points (outliers) that might skew a single sample. The more samples taken, the closer the overall average gets to the actual population mean, making repeated sampling a useful tool for improving accuracy in data analysis.
+              </p>
+              <p>Key things to remember:</p>
+              <ul>
+                <li><strong>Sample Size</strong>: Larger samples tend to be more accurate.</li>
+                <li><strong>Randomness</strong>: Samples should be randomly chosen to ensure fairness.</li>
+                <li><strong>Variation</strong>: Results may differ, but more samples improve accuracy.</li>
+                <li>More Samples, More Accuracy: Additional samples lead to more reliable results.</li>
+                <li><strong>Normal Distribution</strong>: Many samples often result in a predictable pattern.</li>
+                <li><strong>Standard Error</strong>: Repeated samples help estimate the variability of the sample mean.</li>
+                <li><strong>Confidence Intervals</strong>: Provide a range where the true value likely lies.</li>
+                <li>Cost and Resources: More samples require additional time and effort.</li>
+                <li>Consistency: Similar results across samples indicate higher accuracy.</li>
+              </ul>
+              <br><br>
+              <p>
+                Hypothesis testing is a statistical method used to determine whether there is enough evidence in a sample to support a specific claim or hypothesis about a population. The <strong>null hypothesis</strong> (\( H_0 \)) represents the default assumption, while the <strong>alternative hypothesis</strong> (\( H_1 \)) is the claim being tested. The <strong>significance level</strong> (\( \alpha \)) is the probability of incorrectly rejecting \( H_0 \) when it’s true, and the <strong>confidence level</strong> (\( 1 - \alpha \)) reflects the probability of a correct decision. If the <strong>p-value</strong> is less than \( \alpha \), we reject \( H_0 \), suggesting support for the alternative hypothesis.
+              </p>
+              <br><br>
+              <hr>
+
+              <h2><b>Formulas</b></h2>
+              <p><b>Mean of the Sample Means</b></p>
+              <p>The mean of the sample means is equal to the population mean:</p>
+              <div class="center-content">
+                <br>
+                <p>\( \mu_{\bar{x}} = \mu \)</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( \mu_{\bar{x}} \): The mean of the sample means, representing the average of all sample means taken from the population.</li>
+                <li>\( \mu \): The population mean, the true average value of the entire population.</li>
+              </ul>
+
+              <p><b>Standard Error of the Sample Means</b></p>
+              <p>The standard deviation of the sampling distribution of the sample mean (standard error) is given by:</p>
+              <div class="center-content">
+                <br>
+                <p>\( \sigma_{\bar{x}} = \cfrac{\sigma}{\sqrt{n}} \)</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( \sigma_{\bar{x}} \) is the standard error of the sample mean,</li>
+                <li>\( \sigma \) is the population standard deviation,</li>
+                <li>\( n \) is the sample size.</li>
+              </ul>
+
+              <p><b>Mean of the Binomial Distribution</b></p>
+              <p>The mean of the binomial distribution is calculated as follows:</p>
+              <div class="center-content">
+                <br>
+                <p>\( \mu = np \)</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( \mu \) is the mean of the binomial distribution.</li>
+                <li>\( n \) is the number of trials.</li>
+                <li>\( p \) is the probability of success on a single trial.</li>
+              </ul>
+
+              <p><b>Standard Deviation of the Binomial Distribution</b></p>
+              <p>The standard deviation of the binomial distribution is found using this formula:</p>
+              <div class="center-content">
+                <br>
+                <p>\( \sigma = \sqrt{npq} \)</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( \sigma \) is the standard deviation of the binomial distribution.</li>
+                <li>\( n \) is the number of trials.</li>
+                <li>\( p \) is the probability of success on a single trial.</li>
+                <li>\( q = 1 - p \), the probability of failure.</li>
+              </ul>
+              <br><br>
+              <hr>
+
+              <p><b>Example</b></p>
+              <p>Suppose you are estimating the average height of students in a school, and the true population mean height is \( 160 \, \text{cm} \). You take 5 different samples of 10 students each and calculate the sample mean for each. If the sample means are \( 158 \, \text{cm}, 162 \, \text{cm}, 159 \, \text{cm}, 161 \, \text{cm}, \) and \( 160 \, \text{cm} \), what is the average of these sample means? How does this relate to the population mean?</p>
+              <div>
+                <p><b>Solution: Average of Sample Means</b></p>
+                <p>We are given the following sample means from 5 different samples of 10 students each: \( 158 \, \text{cm}, 162 \, \text{cm}, 159 \, \text{cm}, 161 \, \text{cm}, \) and \( 160 \, \text{cm} \). The true population mean height is \( 160 \, \text{cm} \). Let’s calculate the average of the sample means.</p>
+                <p>The formula for the average of the sample means is:</p>
+                <div class="center-content">
+                  <br>
+                  <p>\( \text{Average of sample means} = \cfrac{\text{Sum of sample means}}{\text{Number of samples}} \)</p>
+                </div>
+                <p>First, calculate the sum of the sample means:</p>
+                <div class="center-content">
+                  <br>
+                  <p>\( 158 + 162 + 159 + 161 + 160 = 800 \)</p>
+                </div>
+                <p>Next, divide by the number of samples (which is 5):</p>
+                <div class="center-content">
+                  <br>
+                  <p>\( \text{Average of sample means} = \cfrac{800}{5} = 160 \, \text{cm} \)</p>
+                </div>
+                <p>Therefore, the <b>average of the sample means</b> is \( 160 \, \text{cm} \). This illustrates a key property of repeated sampling: the mean of the sample means (\( \mu_{\bar{x}} \)) equals the population mean (\( \mu \)), as shown in the formula \( \mu_{\bar{x}} = \mu \).</p>
+              </div>
+              <br><br>
+              <hr>
+
+              <div class="well well-sm">
+                <p>A researcher claims that the average time to complete a task is \( \mu = 30 \, \text{minutes} \). To test this claim, they take 8 samples of 25 workers each and record the sample mean times: \( 29.5, 30.2, 29.8, 30.4, 29.7, 30.1, 29.9, 30.3 \) minutes. The population standard deviation is known to be \( \sigma = 2 \, \text{minutes} \).</p>
+                <p>I) Calculate the average of the sample means.</p>
+                <p>II) Using the sampling distribution of the sample mean, determine if the researcher’s claim (\( \mu = 30 \, \text{minutes} \)) is supported at a significance level of \( \alpha = 0.05 \). (Hint: Compute the z-score for the average of the sample means and compare it to the critical z-value for a two-tailed test at \( \alpha = 0.05 \), which is approximately \( \pm 1.96 \).)</p>
+              </div>
+              <div style="display: block;">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example2">Show Answer</span>
+                <div id="example2" class="hidden-answer" style="display: none;">
+                  <div>
+                    <p><b>Solution</b></p>
+                    <p>Part I:</p>
+                    <p>Calculate the Average of the Sample Means</p>
+                    <p>The sample means are: \( 29.5, 30.2, 29.8, 30.4, 29.7, 30.1, 29.9, 30.3 \) minutes. There are 8 samples.</p>
+                    <p>First, compute the sum of the sample means:</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( 29.5 + 30.2 + 29.8 + 30.4 + 29.7 + 30.1 + 29.9 + 30.3 = 239.9 \)</p>
+                    </div>
+                    <p>Now, divide by the number of samples (8):</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( \text{Average of sample means} = \cfrac{239.9}{8} = 29.9875 \, \text{minutes} \)</p>
+                    </div>
+                    <p>So, the <b>average of the sample means</b> is \( 29.9875 \, \text{minutes} \) (or approximately \( 29.99 \, \text{minutes} \)).</p>
+                    <hr>
+                    <p>Part II:</p>
+                    <p>We need to test the <strong>null hypothesis</strong>:</p>
+                    <p>\( H_0: \mu = 30 \, \text{minutes} \) against the <strong>alternative</strong> \( H_a: \mu \neq 30 \, \text{minutes} \) at \( \alpha = 0.05 \).</p>
+                    <p>The sampling distribution of the sample mean is normal because the sample size (\( n = 25 \)) is sufficiently large, and the population standard deviation is known. However, since we’re dealing with the average of 8 sample means, we adjust the standard error.</p>
+                    <p>The standard error of the mean for a single sample is:</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( \sigma_{\bar{x}} = \cfrac{2}{\sqrt{25}} = 0.4 \, \text{minutes} \)</p>
+                    </div>
+                    <p>For the average of 8 sample means, the standard error is:</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( \text{SEM}_{\text{avg}} = \cfrac{2}{\sqrt{25 \cdot 8}} = \cfrac{2}{\sqrt{200}} \approx 0.1414 \, \text{minutes} \)</p>
+                    </div>
+                    <p>Now, calculate the z-score for the average of the sample means (\( 29.9875 \)):</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( z = \cfrac{29.9875 - 30}{0.1414} = \cfrac{-0.0125}{0.1414} \approx -0.0884 \)</p>
+                    </div>
+                    <p>For a two-tailed test at \( \alpha = 0.05 \), the critical z-values are \( \pm 1.96 \). Compare:</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( |z| = 0.0884 < 1.96 \)</p>
+                    </div>
+                    <p>Since the z-score does not fall in the rejection region (\( |z| < 1.96 \)), we fail to reject the null hypothesis.</p>
+                    <p>At the \( \alpha = 0.05 \) significance level, the researcher’s claim (\( \mu = 30 \, \text{minutes} \)) is supported by the data.</p>
+                  </div>
+                </div>
+              </div>
+              <br><br>
+              <hr>
+
+              <div class="well well-sm">
+                <p>A factory claims that the average time to assemble a product is 45 minutes. A researcher collects 12 samples of 30 workers each and records their mean assembly times. If the population standard deviation is 3 minutes, calculate the standard error of the mean (SEM).</p>
+              </div>
+              <div style="display: block;">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example3">Show Answer</span>
+                <div id="example3" class="hidden-answer" style="display: none;">
+                  <div>
+                    <p><b>Solution</b></p>
+                    <p>The standard error of the mean (SEM) is calculated using the formula:</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( \text{SEM} = \cfrac{\sigma}{\sqrt{n}} \)</p>
+                    </div>
+                    <p>Given: population standard deviation \( \sigma = 3 \) minutes, sample size \( n = 30 \).</p>
+                    <p>Substitute the values:</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( \text{SEM} = \cfrac{3}{\sqrt{30}} \)</p>
+                    </div>
+                    <p>Approximate \( \sqrt{30} \approx 5.477 \):</p>
+                    <div class="center-content">
+                      <br>
+                      <p>\( \text{SEM} = \cfrac{3}{5.477} \approx 0.5477 \, \text{minutes} \)</p>
+                    </div>
+                    <p>Therefore, the <b>standard error of the mean</b> is approximately <b>0.548 minutes</b>.</p>
+                  </div>
+                </div>
+              </div>
+              <hr>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="#">Normal Approximation to the Binomial Distribution</a></li>
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="#">Normal Sampling and Modelling</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="#" target="_blank">Practice Question</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

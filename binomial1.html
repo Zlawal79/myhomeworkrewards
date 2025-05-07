@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Binomial Distributions",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-07-02",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Binomial Distributions in Statistics, a Type of Probability Distribution for Discrete Outcomes.">
+    <title>Binomial Distributions</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png">
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .list-group-item { border: 0px solid black; }
+      .breadcrumb { background-color: #5B0A9F; }
+      .breadcrumb > li > a { color: white; }
+      .well { background-color: #DCC4F8; }
+      .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+      .panel-default > .panel-heading { background-color: #DCC4F8; }
+      h1 { font-family: lucida sans; }
+      h2 { font-family: lucida sans; }
+      h3 { font-family: lucida sans; }
+      .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top: 80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/lessons/header.php"); ?>
+
+    <div class="container-fluid" style="margin-bottom: 30px;">
+      <br><br>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="">Lessons</a></li>
+            <li><a href="">Gr12</a></li>
+            <li><a href="">Math</a></li>
+           <li><a href="#">Data Management</a></li>
+            <li><a href="" style="font-weight: bold;">Binomial Distributions</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1 style="text-align: left;">Binomial Distributions</h1>
+              <p><b>What Is a Binomial Distribution?</b></p>
+              <p>A <b>Binomial Distribution</b> is a type of Probability Distribution that follows these conditions:</p>
+              <ul>
+                <li>There are multiple Trials.</li>
+                <li>Each Trial has only two possible outcomes: Success or Failure.</li>
+                <li>The Probability of Success is the same in every Trial.</li>
+                <li>The number of Successes in a fixed number of Trials is the Random Variable.</li>
+                <li>The outcome of one Trial does not affect the outcome of others (Independence).</li>
+              </ul>
+
+              <p><b>Probability in a Binomial Distribution:</b></p>
+              <p>The Binomial Probability Formula calculates the probability of getting exactly \( x \) Successes in \( n \) Trials:</p>
+              <div class="center-content">
+                <p>\[ P(X = x) = \binom{n}{x} p^x q^{n-x} \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( P(X = x) \): The Probability of having exactly \( x \) Successes in \( n \) Trials.</li>
+                <li>\( \binom{n}{x} \): The Binomial Coefficient, representing the number of ways to choose \( x \) Successes out of \( n \) Trials.</li>
+                <li>\( n \): The total number of Trials or Experiments.</li>
+                <li>\( x \): The number of Successes we are interested in (a value between 0 and \( n \)).</li>
+                <li>\( p \): The Probability of Success on any single Trial.</li>
+              </ul>
+
+              <p><b>Expectation for a Binomial Distribution:</b></p>
+              <p>The Expected Number of Successes is given by:</p>
+              <div class="center-content">
+                <p>\[ E(X) = np \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( E(X) \): The Expected Value, or the average number of Successes over many sets of \( n \) Trials.</li>
+                <li>\( n \): The total number of Trials or Experiments.</li>
+                <li>\( p \): The Probability of Success on any single Trial.</li>
+              </ul>
+              <br><br>
+              <hr>
+
+              <p><b>Example:</b> Suppose you roll a fair six-sided die 10 times. What is the Expected Number of times you will roll a 3?</p>
+              <div>
+                <p>Since the die is fair, the Probability of rolling any specific number (like a 3) is:</p>
+                <div class="center-content">
+                  <p>\[ \dfrac{1}{6} \]</p>
+                </div>
+                <p>The Expected Value Formula is:</p>
+                <div class="center-content">
+                  <p>\[ E(X) = np \]</p>
+                  <p>\[ E(X) = 10 \times \dfrac{1}{6} = 1.67 \]</p>
+                </div>
+                <p>Thus, the Expected Number of times you will roll a 3 is 1.67.</p>
+              </div>
+              <br><br>
+              <hr>
+
+              <div class="well well-sm">
+                <p>Lee’s family moves to an area with a different telephone exchange. Their new number has four random digits. Lee’s favorite numbers are prime digits: 2, 3, 5, and 7.</p>
+                <p>i) Calculate the Probability Distribution for the number of these prime digits.</p>
+                <p>ii) What is the Expected Number of these prime digits?</p>
+              </div>
+              <div style="display: block;">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example11">Show Answer</span>
+                <div id="example11" class="hidden-answer" style="display: none;">
+                  <div>
+                    <p>First, note that the prime digits between 0 and 9 are 2, 3, 5, and 7 (not 11 as it's not a single digit). There are 10 possible digits (0-9), so the Probability of a digit being prime is 4 out of 10.</p>
+                    <p>The number of prime digits \( X \) follows a Binomial Distribution: \( X \sim \text{Binomial}(n = 4, p = \dfrac{4}{10}) \).</p>
+                    <p>The Probability Mass Function for a Binomial Distribution is:</p>
+                    <div class="center-content">
+                      <p>\[ P(X = k) = \binom{n}{k} p^k (1-p)^{n-k} \]</p>
+                    </div>
+                    <p>Where \( n = 4 \), \( p = \dfrac{4}{10} = 0.4 \), and \( k \) is the number of prime digits.</p>
+                    <p>Let’s compute the Probability Distribution for \( k = 0, 1, 2, 3, 4 \):</p>
+                    <ul>
+                      <li>For \( X = 0 \):
+                        <div class="center-content">
+                          <p>\[ P(0) = \binom{4}{0} (0.4)^0 (0.6)^4 = 1 \times 1 \times 0.1296 = 0.1296 \]</p>
+                        </div>
+                      </li>
+                      <li>For \( X = 1 \):
+                        <div class="center-content">
+                          <p>\[ P(1) = \binom{4}{1} (0.4)^1 (0.6)^3 = 4 \times 0.4 \times 0.216 = 0.3456 \]</p>
+                        </div>
+                      </li>
+                      <li>For \( X = 2 \):
+                        <div class="center-content">
+                          <p>\[ P(2) = \binom{4}{2} (0.4)^2 (0.6)^2 = 6 \times 0.16 \times 0.36 = 0.3456 \]</p>
+                        </div>
+                      </li>
+                      <li>For \( X = 3 \):
+                        <div class="center-content">
+                          <p>\[ P(3) = \binom{4}{3} (0.4)^3 (0.6)^1 = 4 \times 0.064 \times 0.6 = 0.1536 \]</p>
+                        </div>
+                      </li>
+                      <li>For \( X = 4 \):
+                        <div class="center-content">
+                          <p>\[ P(4) = \binom{4}{4} (0.4)^4 (0.6)^0 = 1 \times 0.0256 \times 1 = 0.0256 \]</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <p>Let’s find the Expected Value:</p>
+                    <div class="center-content">
+                      <p>\[ E(X) = np \]</p>
+                      <p>\[ E(X) = 4 \times 0.4 = 1.6 \]</p>
+                    </div>
+                    <p>So, the Expected Number of prime digits is 1.6.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="">Probability Distributions</a></li>
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="">Hypergeometric Distributions</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT'] . "/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

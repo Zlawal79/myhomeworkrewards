@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Repeated Sampling and Hypothesis Testing",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-02-28",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Understanding Confidence Intervals in Statistics">
+    <title>Confidence Intervals</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .list-group-item { border: 0px solid black; }
+      .breadcrumb { background-color: #5B0A9F; }
+      .breadcrumb > li > a { color: white; }
+      .well { background-color: #DCC4F8; }
+      .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+      .panel-default > .panel-heading { background-color: #DCC4F8; }
+      h1, h2, h3 { font-family: "Lucida Sans", sans-serif; }
+      .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top: 80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php"); ?>
+
+    <div class="container-fluid" style="margin-bottom: 30px;">
+      <br><br>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="#">Confidence Intervals</a></li>
+            <li><a href="#">Gr12</a></li>
+            <li><a href="#">Math</a></li>
+            <li><a href="#">Calculus and Vectors</a></li>
+            <li><a href="#" style="font-weight: bold;">Confidence Intervals</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1><b>Confidence Intervals</b></h1>
+              <p>
+                A <strong>confidence interval (CI)</strong> is a range of values used to estimate an unknown <strong>population parameter</strong>, such as the true proportion of people who support a government initiative. Instead of measuring the entire population, researchers collect a sample and use statistical methods to infer information about the larger group.
+              </p>
+              <p>Key Components of Confidence Intervals:</p>
+              <ul>
+                <li><strong>Sample Mean (x̄):</strong> The average value from the sample, used as the center of the confidence interval.</li>
+                <li><strong>Margin of Error (ME):</strong> The possible difference between the sample result and the true population value.</li>
+                <li><strong>Confidence Level (1 − α):</strong> The probability that the confidence interval includes the true population value (e.g., 95% means we are 95% sure the interval contains the true value).</li>
+              </ul>
+              <br><br>
+              <hr>
+              <h3><b>Formulas</b></h3>
+
+              <p><b>Probability Basics</b></p>
+              <p>The probability of success in a given sample is represented as:</p>
+              <p>\[ p = \hat{p} \]</p>
+              <p>Where:</p>
+              <ul>
+                <li>\(p\) is the probability of success on a single trial</li>
+                <li>\(\hat{p}\) is the sample proportion</li>
+              </ul>
+              <p>The probability of failure is given by:</p>
+              <p>\[ q = 1 - p \] </p>
+              <p>Where:</p>
+              <ul>
+                <li>\(q\) is the probability of failure on a single trial</li>
+                <li>\(p\) is the probability of success on a single trial</li>
+              </ul>
+
+              <p>Confidence Interval for Mean</p>
+              <p>For a normal distribution, the confidence interval for a <strong>population mean</strong> (\(\mu\)) is calculated as:</p>
+              <p>
+                \[ P\left(\bar{x} - z_{\alpha/2} \left(\cfrac{\sigma}{\sqrt{n}}\right) < \mu < \bar{x} + z_{\alpha/2} \left(\cfrac{\sigma}{\sqrt{n}}\right)\right) = 1 - \alpha \]
+              </p>
+              <p>A simplified form for the P% confidence interval is:</p>
+              <p>
+                \[ \bar{x} \pm z_{\alpha/2} \left(\cfrac{\sigma}{\sqrt{n}}\right) \]
+              </p>
+              <p>Where:</p>
+              <ul>
+                <li>\(\bar{x}\) is the sample mean</li>
+                <li>\(z_{\alpha/2}\) is the critical value from the standard normal distribution</li>
+                <li>\(\sigma\) is the population standard deviation (or estimated from the sample)</li>
+                <li>\(n\) is the sample size</li>
+                <li>\(\mu\) is the population mean</li>
+                <li>\(\alpha\) is the significance level, and \(\alpha = (100 - P)\%\)</li>
+              </ul>
+
+              <p><b>Confidence Interval for Proportion</b></p>
+              <p>For a <strong>population proportion</strong> based on binomial data, the confidence interval is given by:</p>
+              <p>
+                \[ \hat{p} \pm z_{\alpha/2} \left(\sqrt{\cfrac{pq}{n}}\right) \]
+              </p>
+              <p>Where:</p>
+              <ul>
+                <li>\(\hat{p}\) is the sample proportion</li>
+                <li>\(z_{\alpha/2}\) is the critical value from the standard normal distribution</li>
+                <li>\(p\) is the probability of success</li>
+                <li>\(q\) is the probability of failure</li>
+                <li>\(n\) is the sample size</li>
+              </ul>
+
+              <p><b>Sample Size & Margin of Error</b></p>
+              <p>For a specified <strong>margin of error</strong> \( w \), the required sample size is calculated as:</p>
+              <p>
+                \[ n = \left(\cfrac{z_{\alpha/2} \cdot \sigma}{w}\right)^2 \]
+              </p>
+              <p>Where:</p>
+              <ul>
+                <li>\(n\) is the sample size</li>
+                <li>\(z_{\alpha/2}\) is the critical value from the standard normal distribution</li>
+                <li>\(\sigma\) is the population standard deviation</li>
+                <li>\(w\) is the margin of error</li>
+              </ul>
+
+              <p><b>Why These Formulas</b></p>
+              <p>These formulas help determine confidence intervals and required sample sizes when estimating <strong>population parameters</strong> based on sample data. They account for <strong>sampling variability</strong> and ensure that estimates remain within a specified level of accuracy.</p>
+              <br><br>
+              <hr>
+              <p>A sample of 100 students has an average test score of 75 with a standard deviation of 10. Find the 95% <strong>confidence interval</strong>.</p>
+              <div>
+                <p>Given: \(\bar{x} = 75\), \(\sigma = 10\), \(n = 100\), \(z_{0.025} = 1.96\)</p>
+                <p>Step 1: Calculate the standard error:</p>
+                \[ \cfrac{\sigma}{\sqrt{n}} = \cfrac{10}{\sqrt{100}} = \cfrac{10}{10} = 1 \]
+                <p>This measures the variability of the sample mean.</p>
+                <p>Step 2: Find the margin of error:</p>
+                \[ 1.96 \times 1 = 1.96 \]
+                <p>This is the critical value times the standard error.</p>
+                <p>Step 3: Construct the interval:</p>
+                \[ 75 - 1.96 = 73.04 \]
+                \[ 75 + 1.96 = 76.96 \]
+                <p><b>Confidence Interval: (73.04, 76.96).</b> This means we are 95% confident that the true average test score lies between 73.04 and 76.96.</p>
+              </div>
+              <br><br>
+              <hr>
+              <div class="well well-sm">
+                <p>In a survey of 500 voters, 320 support a new policy. Find the 99% <strong>confidence interval</strong> for the proportion of supporters.</p>
+              </div>
+              <div style="display: block;">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example2">Show Answer</span>
+                <div id="example2" class="hidden-answer" style="display: none;">
+                  <div>
+                    <p>Step 1: Determine probabilities:</p>
+                    <p>Calculate the sample proportion:</p>
+                    \[ \hat{p} = \cfrac{320}{500} = 0.64 \]
+                    <p>Find the probability of failure:</p>
+                    \[ q = 1 - 0.64 = 0.36 \]
+                    <p>Step 2: Identify the critical value:</p>
+                    \[ z_{0.005} = 2.576 \]
+                    <p>For 99% confidence, this reflects the higher certainty level.</p>
+                    <p>Step 3: Compute the standard error:</p>
+                    \[ \sqrt{\cfrac{(0.64)(0.36)}{500}} \]
+                    \[ = \sqrt{\cfrac{0.2304}{500}} \]
+                    \[ = \sqrt{0.0004608} \]
+                    \[ = 0.02147 \]
+                    <p>Step 4: Find the margin of error:</p>
+                    \[ 2.576 \times 0.02147 = 0.0553 \]
+                    <p>Step 5: Construct the interval:</p>
+                    \[ 0.64 - 0.0553 = 0.5847 \]
+                    \[ 0.64 + 0.0553 = 0.6953 \]
+                    <p><b>Confidence Interval: (58.47%, 69.53%).</b> We are 99% confident that the true proportion of supporters is between 58.47% and 69.53%.</p>
+                  </div>
+                </div>
+              </div>
+              <br><br>
+              <hr>
+              <div class="well well-sm">
+                <p>A researcher wants to estimate the average weight of fish with a margin of error of 2 kg and 95% confidence. The estimated standard deviation is 12 kg. Find the required sample size.</p>
+              </div>
+              <div style="display: block;">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example3">Show Answer</span>
+                <div id="example3" class="hidden-answer" style="display: none;">
+                  <div>
+                    <p>Given: \(w = 2\), \(\sigma = 12\), \(z_{0.025} = 1.96\)</p>
+                    <p>Step 1: Use the sample size formula:</p>
+                    \[ n = \left(\cfrac{z_{\alpha/2} \cdot \sigma}{w}\right)^2 \]
+                    <p>This ensures the margin of error is met.</p>
+                    <p>Step 2: Calculate the numerator:</p>
+                    \[ 1.96 \times 12 = 23.52 \]
+                    <p>Step 3: Divide by the margin of error:</p>
+                    \[ \cfrac{23.52}{2} = 11.76 \]
+                    <p>Step 4: Square the result:</p>
+                    \[ 11.76^2 = 138.18 \]
+                    <p>Step 5: Round up to the next whole number:</p>
+                    \[ 139 \]
+                    <p><b>Required Sample Size: 139.</b> The researcher needs to sample at least 139 fish to achieve the desired accuracy.</p>
+                  </div>
+                </div>
+              </div>
+              <hr> 
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="#">Normal Approximation to the Binomial Distribution</a></li>
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="#">Normal Sampling and Modelling</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="#" target="_blank">Practice Question</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

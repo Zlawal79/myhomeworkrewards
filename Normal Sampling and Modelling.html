@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Normal Sampling and Modelling",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-02-28",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Properties of the Normal Distribution in Statistics, a Key Continuous Probability Distribution">
+    <title>Normal Sampling and Modelling</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .list-group-item { border: 0px solid black; }
+      .breadcrumb { background-color: #5B0A9F; }
+      .breadcrumb > li > a { color: white; }
+      .well { background-color: #DCC4F8; }
+      .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+      .panel-default > .panel-heading { background-color: #DCC4F8; }
+      h1 { font-family: lucida sans; }
+      h2 { font-family: lucida sans; }
+      h3 { font-family: lucida sans; }
+      .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top:80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php"); ?>
+
+    <div class="container-fluid" style="margin-bottom:30px;">
+      <br><br>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="">Lessons</a></li>
+            <li><a href="">Gr12</a></li>
+            <li><a href="">Math</a></li>
+            <li><a href="#">Data Management</a></li>
+            <li><a href="" style="font-weight:bold;">Normal Sampling and Modelling</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1><b>Normal Sampling and Modelling</b></h1>
+              <p>
+               Normal <b>sampling</b> and <b>modeling</b> involve selecting a small but representative group (a sample) from a larger <b>population</b> to draw conclusions about the whole. This is especially useful when measuring the entire population isn’t practical. If the population follows a <b>normal distribution</b>—where most values are concentrated around the <b>average</b>, forming a <b>bell-shaped curve</b>—the sample will typically reflect that pattern. By analyzing the sample, we can make reliable <b>predictions</b> about the entire population. The larger the sample, the more accurately it represents the population, improving the <b>reliability</b> of our conclusions.
+              </p>
+              <br><br>
+              <p>Although <b>normal distributions</b> often deal with <b>continuous data</b>, <b>discrete data</b>, such as the <b>number of earthquakes</b> that you count in whole numbers, can sometimes be modeled with a <b>normal distribution</b>. Even though it’s not continuous like height or time, if you have a big enough set of this data and it forms a <b>symmetric, bell-shaped pattern</b> with one peak, a statistician might fit a smooth <b>normal curve</b> to it. Once that curve fits, they can use it to make <b>predictions</b> about the data, just like they would with continuous stuff.</p>
+              <br><br>
+              <h2>Formulas</h2>
+              <p>The Z-Score formula calculates how far a value is from the mean in standard deviations:</p>
+              <div class="center-content">
+                <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( z \) is the z-score (standardized value).</li>
+                <li>\( x \) is the observed value (e.g., height).</li>
+                <li>\( \mu \) is the population mean.</li>
+                <li>\( \sigma \) is the population standard deviation.</li>
+              </ul>
+              <p>The Standard Error measures the variability of the sample mean:</p>
+              <div class="center-content">
+                <p>\[ SE = \frac{\sigma}{\sqrt{n}} \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( SE \) is the standard error.</li>
+                <li>\( \sigma \) is the population standard deviation.</li>
+                <li>\( n \) is the sample size.</li>
+              </ul>
+              <br><br>
+              <hr>
+              <p><b>Example:</b></p>
+              <p>A researcher measures the heights of 50 randomly selected adults and finds the average height is 170 cm with a standard deviation of 10 cm. Assuming the population is normally distributed, what’s the probability that a randomly chosen person from the population is taller than 180 cm?</p>
+              <div>
+                <p>Given Information are as follow:</p>
+                <ul>
+                  <li>Mean height: \( \mu = 170 \) cm</li>
+                  <li>Standard Deviation: \( \sigma = 10 \) cm</li>
+                  <li>Observed value: \( x = 180 \) cm</li>
+                  <li>Sample size: 50 (not directly used here, but confirms population normality assumption)</li>
+                </ul>
+                <p>Calculate the Z-Score using the formula:</p>
+                <div class="center-content">
+                  <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+                </div>
+                <p>Substitute the values:</p>
+                <div class="center-content">
+                  <p>\[ z = \frac{180 - 170}{10} = \frac{10}{10} = 1 \]</p>
+                </div>
+                <img src="https://cdn.prod.website-files.com/6634a8f8dd9b2a63c9e6be83/669d62f2842c5df99b62612a_z-score-table-1.png" alt="Z-Score Table" style="max-width: 100%; height: auto;">
+                <img src="https://cdn.prod.website-files.com/6634a8f8dd9b2a63c9e6be83/669d62f2842c5df99b626142_z-score-table-2.png" alt="Z-Score Table" style="max-width: 100%; height: auto;">
+                <br><br>
+                <p>A z-score of 1 means 180 cm is 1 standard deviation above the mean.</p>
+                <p>Using a standard normal table above, the probability of being less than \( z = 1 \) is approximately 0.8413 (84.13%).</p>
+                <p>Since we want the probability of being greater than 180 cm, subtract from 1:</p>
+                <div class="center-content">
+                  <p>\[ P(x > 180) = 1 - 0.8413 = 0.1587 \]</p>
+                </div>
+                <p>Therefore, the probability that a randomly chosen person is taller than 180 cm is approximately 0.1587, or 15.87%.</p>
+              </div>
+              <br><br>
+              <hr>
+              <div class="well well-sm">
+                <p>A company tests the battery life of 100 phones and gets an average of 20 hours with a standard deviation of 2 hours. If they use a normal model, how would the spread of the sample means change if they tested 400 phones instead?</p>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example2">Show Answer</span>
+                <div id="example2" class="hidden-answer" style="display: none">
+                  <div>
+                    <p>Given Information are as follow:</p>
+                    <ul>
+                      <li>Mean battery life: \( \mu = 20 \) hours </li>
+                      <li>Standard Deviation: \( \sigma = 2 \) hours</li>
+                      <li>Initial sample size: \( n_1 = 100 \)</li>
+                      <li>New sample size: \( n_2 = 400 \)</li>
+                    </ul>
+                    <p>Calculate the Standard Error (SE) using the formula:</p>
+                    <div class="center-content">
+                      <p>\[ SE = \frac{\sigma}{\sqrt{n}} \]</p>
+                    </div>
+                    <p>For 100 phones:</p>
+                    <div class="center-content">
+                      <p>\[ SE_1 = \frac{2}{\sqrt{100}} = \frac{2}{10} = 0.2 \text{ hours} \]</p>
+                    </div>
+                    <p>For 400 phones:</p>
+                    <div class="center-content">
+                      <p>\[ SE_2 = \frac{2}{\sqrt{400}} = \frac{2}{20} = 0.1 \text{ hours} \]</p>
+                    </div>
+                    <p>The spread of the sample means is the <b>standard error</b>, which decreases from 0.2 hours to 0.1 hours.</p>
+                    <p>It just means that, the spread gets halved because a larger sample size reduces the standard error, making the sample mean more precise.</p>
+                    <p>Therefore, the spread of the sample means would decrease from 0.2 hours to 0.1 hours.</p>
+                  </div>
+                </div>
+              </div>
+              <br><br>
+              <hr>
+              <div class="well well-sm">
+                <p>A city records the number of daily car accidents over 200 days, with an average of 5 accidents per day and a standard deviation of 2. Since the data is discrete but forms a bell shape, how could a statistician use a normal model to predict the chance of having 8 or more accidents in a day?</p>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example3">Show Answer</span>
+                <div id="example3" class="hidden-answer" style="display: none">
+                  <div>
+                    <p>What given:</p>
+                    <ul>
+                      <li>Mean accidents: \( \mu = 5 \) per day</li>
+                      <li>Standard Deviation: \( \sigma = 2 \)</li>
+                      <li>Observed value: \( x = 8 \) accidents</li>
+                      <li>Sample size: 200 days (supports normal approximation)</li>
+                    </ul>
+                    <p>Since the data is <b>discrete but bell-shaped with a large sample</b>, we can approximate it with a normal model as stated earlier.</p>
+                    <p>Calculate the Z-Score for 8 accidents:</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+                    </div>
+                    <p>Substitute the values:</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{8 - 5}{2} = \frac{3}{2} = 1.5 \]</p>
+                    </div>
+                    <p>A z-score of 1.5 means 8 accidents is 1.5 standard deviations above the mean.</p>
+                    <p>Using a standard normal table from above, the probability of being less than \( z = 1.5 \) is approximately 0.9332 (93.32%).</p>
+                    <p>For 8 or more accidents, we want the area above 1.5, so:</p>
+                    <div class="center-content">
+                      <p>\[ P(x \geq 8) = 1 - 0.9332 = 0.0668 \]</p>
+                    </div>
+                    <p>Therefore, a statistician would use the normal model to estimate about a 6.68% chance of 8 or more accidents in a day.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Normal Approximation to the Binomial Distribution</a></li>
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Properties of the Normal Distribution</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

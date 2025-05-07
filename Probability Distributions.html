@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Probability Distributions",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-07-02",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Probability Distributions in Statistics and Their Types, Including Discrete and Continuous Distributions.">
+    <title>Probability Distributions</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .list-group-item { border: 0px solid black; }
+        .breadcrumb { background-color: #5B0A9F; }
+        .breadcrumb > li > a { color: white; }
+        .well { background-color: #DCC4F8; }
+        .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+        .panel-default > .panel-heading { background-color: #DCC4F8; }
+        h1 { font-family: lucida sans; }
+        h2 { font-family: lucida sans; }
+        .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top:80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php");?>
+
+    <div class="container-fluid" style="margin-bottom:30px;">
+      <br><br>
+      <div class="row">            
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="">Lessons</a></li>
+            <li><a href="">Gr12</a></li>
+            <li><a href="">Math</a></li>
+           <li><a href="#">Data Management</a></li>
+            <li><a href="" style="font-weight:bold;">Probability Distributions</a></li>
+          </ol>            
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1 style="text-align: left;">Probability Distributions</h1>
+              <p><b>Probability Distributions:</b> A Probability Distribution shows the probabilities of all possible outcomes of an experiment. The sum of the probabilities in any distribution is always 1.</p>
+              <p>In <b>Probability Experiments</b>, the outcomes are often numerical, meaning they can be counted or measured. A Random Variable is used to represent these outcomes in numerical form.</p>
+              <hr>
+
+              <h2>Random Variable</h2>
+              <div>
+                <strong>There are Two Different Types of Random Variables:</strong><br><br>
+              </div>
+              <p><b>Discrete Distribution:</b> This type of distribution consists of whole numbers. An example of a Discrete Distribution is the number of heads obtained when flipping a coin multiple times.</p> 
+              <p><b>Continuous Distribution:</b> This type of distribution can take any value within a range, including decimals. An example of a Continuous Distribution is the time taken to finish a race.</p>
+              <div><br>Probability of getting a specific value for a Random Variable is \( P(X = x) \) or just \( P(x) \).</div><br>
+              <hr>
+
+              <h2>Non-Random Probability Distribution</h2>
+              <p>A Non-Random Probability Distribution typically <b>doesn’t exist since Probability Distributions</b> describe Random Variables with uncertain outcomes. Non-Random Variables have fixed values, so their "distribution" would assign a probability of 1 to a single outcome.</p><br>
+              <hr>
+
+              <p><b>Example:</b> A fair die is rolled once. What is the probability of rolling a 4?</p>
+              <div>
+                <p>The possible outcomes of rolling a die are 1, 2, 3, 4, 5, and 6. Since the die is fair, each outcome has an equal chance. The probability of rolling a 4 is:</p>
+                <p class="center-content"><span id="math1">\[ P(X = 4) = \frac{1}{6} \]</span></p>
+                <p>Therefore, the probability of rolling a 4 is \( \frac{1}{6} \).</p>
+              </div>
+              <br><br>
+              <hr>
+
+              <div class="well well-sm">
+                <p>A person is measured to have a height that is randomly between 150 cm and 200 cm. What is the probability that the person’s height is exactly 170 cm?</p> </div>
+                <div style="display: block">
+                  <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example11">Show Answer</span>
+                  <div id="example11" class="hidden-answer" style="display: none">
+                    <div>
+                      <p>For Continuous Distributions, the probability of getting an exact value is 0 because there are infinite possible values in the range. So, the probability is:</p>
+                      <p class="center-content"><span id="math2">\[ P(Y = 170) = 0 \]</span></p>
+                      <p>Therefore, the probability of the height being exactly 170 cm is 0.</p>
+                    </div>
+                  </div>
+                </div>
+              <br><br>
+              <hr>
+
+              <h2>Uniform Distribution</h2>
+              <p><b>Uniform Distribution:</b> This type of Probability Distribution can be classified as either <b>Continuous or Discrete</b>, depending on the nature of the outcome. In a Uniform Distribution, all outcomes are <b>equally likely</b>, meaning each result has the same probability of occurring. In a Discrete Uniform Distribution, if there are \( n \) possible outcomes, then the probability of each outcome is given by:</p>
+              <div class="">
+                <p>\[ P(x) = \frac{1}{n} \]</p>
+                <p>Where:</p>
+                <ul>
+                  <li>\( n \) is the total number of possible outcomes.</li>
+                </ul>
+              </div>
+              <hr>
+
+              <h2>Expectation and Expected Value</h2>
+              <p><b>Expectation and Expected Value:</b> Represents the average outcome of a Probability Distribution. It is calculated by multiplying each outcome by its probability and summing the results.</p>
+              <div class="center-content">
+                <p>\[ E(X) = x_1 P(x_1) + x_2 P(x_2) + \dots + x_n P(x_n) \]</p>
+                <p>Where:</p>
+                <p>\( x_1, x_2, x_3, \dots, x_n \) are the possible outcomes (Random Variables).</p>
+                <p>\( P(x_1), P(x_2), \dots, P(x_n) \) are the probabilities of each outcome.</p>
+              </div><br>
+              <hr>
+
+              <div class="well well-sm">
+                <p>A nature retreat has 7 4.5-meter kayaks, 4 5.1-meter kayaks, 2 5.3-meter kayaks, and 5 6.0-meter kayaks. Kayaks are randomly assigned to adventurers going on a river trip.</p> 
+                <p>i) Show the Probability Distribution for the length of an assigned kayak.</p>
+                <p>ii) Calculate the Expected Value for the length of an assigned kayak.</p> </div>
+                <div style="display: block">
+                  <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example2">Show Answer</span>
+                  <div id="example2" class="hidden-answer" style="display: none">
+                    <div>
+                      <p>Step 1: Find the total number of kayaks.</p>
+                      <p class="center-content">\[ 7 + 4 + 2 + 5 = 18 \text{ kayaks} \]</p>
+                      <p>Step 2: Find the probability of each kayak length.</p>
+                      <p class="center-content">\[ P(4.5) = \frac{7}{18}, \quad P(5.1) = \frac{4}{18}, \quad P(5.3) = \frac{2}{18}, \quad P(6.0) = \frac{5}{18} \]</p>
+                      <p>Step 3: Calculate the Expected Value \( E(X) \).</p>
+                      <p class="center-content">\[ E(X) = 4.5 \times \frac{7}{18} + 5.1 \times \frac{4}{18} + 5.3 \times \frac{2}{18} + 6.0 \times \frac{5}{18} \]</p>
+                      <p class="center-content">\[ E(X) = 5.2 \]</p>
+                      <p>Therefore, the Expected Length of the kayak is 5.2 meters, as calculated above.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Binomial Distributions</a></li>
+                    <li class="list-group-item" style="padding: 0px 0px 10px 0px;"><a href="">Hypergeometric Distributions</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

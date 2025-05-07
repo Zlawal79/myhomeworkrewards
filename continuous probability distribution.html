@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Continuous Probability Distributions",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-02-28",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Continuous Probability Distributions in Statistics, Including Normal, Exponential, and Uniform Distributions">
+    <title>Continuous Probability Distributions</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .list-group-item { border: 0px solid black; }
+      .breadcrumb { background-color: #5B0A9F; }
+      .breadcrumb > li > a { color: white; }
+      .well { background-color: #DCC4F8; }
+      .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+      .panel-default > .panel-heading { background-color: #DCC4F8; }
+      h1 { font-family: lucida sans; }
+      h2 { font-family: lucida sans; }
+      h3 { font-family: lucida sans; }
+      .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top:80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php"); ?>
+
+    <div class="container-fluid" style="margin-bottom:30px;">
+      <br>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="">Lessons</a></li>
+            <li><a href="">Gr12</a></li>
+            <li><a href="">Math</a></li>
+            <li><a href="#">Data Management</a></li>s
+            <li><a href="" style="font-weight:bold;">Continuous Probability Distributions</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1>Continuous Probability Distributions</h1>
+              <p>
+                A <b>Continuous Probability Distribution</b> describes the probabilities of a Continuous Random Variable, which can take any fractional or decimal value within a given range. Unlike Discrete Distributions such as the Binomial or Hypergeometric Distributions, which deal with countable outcomes, Continuous Distributions are represented by smooth Probability Density Curves.
+              </p>
+              <p>Key Characteristics of Continuous Probability Distributions:</p>
+              <ul>
+                <li><b>Probability Density Function (PDF):</b> Instead of specific values, probabilities are found by measuring the Area Under the Curve within a certain range.</li>
+                <li><b>Skewness:</b> The shape of the distribution can be <b>Symmetrical, Positively Skewed</b> (stretched to the right), or <b>Negatively Skewed</b> (stretched to the left).</li>
+                <li><b>Modality:</b> A distribution can have <b>One Peak, Called Unimodal</b>, or <b>Two Peaks, Called Bimodal</b>, which may happen when there are two different groups in the data.</li>
+              </ul>
+              <p>Examples of Common Continuous Distributions:</p>
+              <ul>
+                <li><b>Normal Distribution:</b> This looks like a <b>Bell Curve</b> and is common in nature (e.g., heights, test scores).</li>
+                <li><b>Exponential Distribution:</b> This is used for things <b>like Waiting Time</b> (e.g., time between bus arrivals).</li>
+                <li><b>Uniform Distribution:</b> All values in a <b>Uniform Distribution Have Equal Chances</b> (e.g., random number generation within a range).</li>
+              </ul>
+              <hr>
+              <h2>Exponential Distribution</h2>
+              <p><b>Exponential Distribution:</b></p>
+              <p>The Exponential Distribution helps predict how long you will wait between random events, like phone calls, customer arrivals, or machine failures.</p>
+              <p>The formula for the Exponential Distribution is:</p>
+              <div class="center-content">
+                <p>\[ P(x) = k e^{-kx} \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( k \) is the Rate Parameter, \( \frac{1}{\mu} \).</li>
+                <li>\( x \) is the Waiting Time.</li>
+                <li>\( e \) is a Mathematical Constant, approximately 2.71828.</li>
+              </ul>
+              <hr>
+              <h2>The Difference Between Exponential and Normal Distribution</h2>
+              <p>
+                The Exponential Distribution is <b>Asymmetric</b>, meaning it has a Peak at <b>Zero and a Long Tail on One Side</b>. This means events are most likely to happen quickly (e.g., a short wait), and the chance of longer waits decreases. It’s used for situations <b>like Waiting Times or Time Between Random Events</b>.
+              </p>
+              <p>
+                The Normal Distribution, or <b>Bell Curve, is Symmetric</b>, meaning both sides of the curve are the same. Most values are close to the middle (Mean), and fewer values are found at the extremes. It’s often used to model things like people’s heights, where most are near average and fewer are very short or tall.
+              </p>
+              <hr>
+              <p><b>Example:</b></p>
+              <p>Give three examples for each of these distributions: Exponential, Bimodal, and Positively Skewed Distribution.</p>
+              <div>
+                <p>The following examples illustrate real-world scenarios for each distribution type. These cases highlight how the shape and properties of each distribution apply to different situations.</p>
+                <p>a) <b>Bimodal Distribution:</b></p>
+                <ul>
+                  <li>Test Scores: Most students score very high or low, with few in the middle.</li>
+                  <li>Heights of Men and Women: Two peaks for men’s and women’s average heights.</li>
+                  <li>Job Salaries: Different salary ranges for junior and senior-level employees.</li>
+                </ul>
+                <p>b) <b>Exponential Distribution:</b></p>
+                <ul>
+                  <li>Time Between Bus Arrivals: Short waits are common, long waits are rare.</li>
+                  <li>Radioactive Decay: Particles are more likely to decay quickly.</li>
+                  <li>Customer Arrival Time at a Store: Customers arrive randomly, with short waits more likely.</li>
+                </ul>
+                <p>c) <b>Positively Skewed Distribution:</b></p>
+                <ul>
+                  <li>Income Distribution: Most people earn average or low incomes, with a few high earners.</li>
+                  <li>Age at Retirement: Most retire at a typical age, but some much later.</li>
+                  <li>Number of Children in Families: Most families have 1-3 children, with a few having many more.</li>
+                </ul>
+              </div>
+              <hr>
+              <div class="well well-sm">
+                <p>Suppose an Average Time of a customer at a service desk is 4 minutes. Find the Probability Density that the next customer arrives exactly at 2 minutes after the last arrival.</p>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example11">Show Answer</span>
+                <div id="example11" class="hidden-answer" style="display: none">
+                  <div>
+                    <p>\[ k = \frac{1}{\mu} = \frac{1}{4} = 0.25 \]</p>
+                    <p>\[ P(x) = k e^{-kx} \]</p>
+                    <p>\[ P(2) = 0.25 e^{-0.25 \cdot 2} \]</p>
+                    <p>\[ P(2) = 0.25 e^{-0.5} \]</p>
+                    <p>\[ P(2) = 0.25 \cdot 0.6065 \approx 0.1516 \]</p>
+                    <p>Therefore, the Probability Density at \( x = 2 \) minutes is approximately 0.1516.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Geometric Distributions</a></li>
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Hypergeometric Distributions</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

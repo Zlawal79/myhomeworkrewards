@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Properties of the Normal Distribution",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-02-28",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Properties of the Normal Distribution in Statistics, a Key Continuous Probability Distribution">
+    <title>Properties of the Normal Distribution</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .list-group-item { border: 0px solid black; }
+      .breadcrumb { background-color: #5B0A9F; }
+      .breadcrumb > li > a { color: white; }
+      .well { background-color: #DCC4F8; }
+      .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+      .panel-default > .panel-heading { background-color: #DCC4F8; }
+      h1 { font-family: lucida sans; }
+      h2 { font-family: lucida sans; }
+      h3 { font-family: lucida sans; }
+      .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top:80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php"); ?>
+
+    <div class="container-fluid" style="margin-bottom:30px;">
+      <br><br>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="">Lessons</a></li>
+            <li><a href="">Gr12</a></li>
+            <li><a href="">Math</a></li>
+           <li><a href="#">Data Management</a></li>
+            <li><a href="" style="font-weight:bold;">Properties of the Normal Distribution</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1>Properties of the Normal Distribution</h1>
+              <p>
+                Many real-world measurements, like height and weight, usually cluster around an Average Value, with fewer cases at the extreme high or low ends. This pattern forms a <b>Bell-Shaped Curve</b> known as the <b>Normal Distribution</b>.
+              </p>
+              <br><br>
+              <p>Characteristics of the Normal Distribution</p>
+              <p>
+                A <b>Normal Distribution</b> is fully determined by two key values: the <b>Mean</b> (\( \mu \)) and the <b>Standard Deviation</b> (\( \sigma \)). Because it is <b>Symmetric and Unimodal</b>, the <b>Mean, Median, and Mode are always equal</b>. The spread of the data depends on \( \sigma \) — when \( \sigma \) is <b>small</b>, the values are closely packed around the Mean, forming a <b>Narrow Bell Curve</b>. Conversely, a <b>larger \( \sigma \)</b> means the data is more spread out, creating a <b>Wider, More Dispersed Bell Shape</b>.
+              </p>
+              <hr>
+              <br><br>
+              <p>The z-score which is also called the standard score tells us how far a number is from the average (mean) of a dataset, which is measured in standard deviations.</p>
+              <div class="center-content">
+                <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( x \) is the Value from the Data Set.</li>
+                <li>\( \mu \) is the Mean of the Data Set.</li>
+                <li>\( \sigma \) is the Standard Deviation of the Data Set.</li>
+              </ul>
+              <h2>Z-Scores</h2>
+              <p>
+                The Z-Score measures how many Standard Deviations a Data Point (\( x \)) is away from the Mean (\( \mu \)). A positive Z-Score indicates the value is above the Mean, while a negative Z-Score indicates the value is below the Mean.
+              </p>
+              <p>Characteristics of the Z-Score:</p>
+              <ul>
+                <li>A Z-Score of 0 means the Data Value is exactly equal to the Mean (\( \mu \)).</li>
+                <li>Positive Z-Scores indicate values greater than the Mean (\( \mu \)).</li>
+                <li>Negative Z-Scores indicate values less than the Mean (\( \mu \)).</li>
+                <li>The Z-Score converts a Normal Distribution to the Standard Normal Distribution, which has a Mean of 0 and a Standard Deviation of 1.</li>
+              </ul>
+              <p>
+                Using the Z-Score, we can find the Probability of a value occurring within a Normal Distribution by referring to the Areas Under the Curve of the Standard Normal Distribution.
+              </p>
+              <hr>
+              <h2>The Difference Between Exponential and Normal Distribution</h2>
+              <p>
+                The Exponential Distribution is <b>Asymmetric</b>, meaning it has a Peak at <b>Zero and a Long Tail on One Side</b>. This means events are most likely to happen quickly (e.g., a short wait), and the chance of longer waits decreases. It’s used for situations <b>like Waiting Times or Time Between Random Events</b>.
+              </p>
+              <p>
+                The Normal Distribution, or <b>Bell Curve, is Symmetric</b>, meaning both sides of the curve are the same. Most values are close to the middle (Mean), and fewer values are found at the extremes. It’s often used to model things like people’s heights, where most are near average and fewer are very short or tall.
+              </p>
+              <br><br>
+              <hr>
+              <p><b>Example:</b></p>
+              <p>Alex is 165 cm tall. The heights of women in his city are Normally Distributed with a Mean of 160 cm and a Standard Deviation of 8 cm. What is the Probability that a randomly selected woman from his city will be taller than Alex?</p>
+              <div>
+                <p>Identify the given information:</p>
+                <ul>
+                  <li>Alex's height: \( x = 165 \) cm</li>
+                  <li>Mean height of women: \( \mu = 160 \) cm</li>
+                  <li>Standard Deviation: \( \sigma = 8 \) cm</li>
+                </ul>
+                <p>Calculate the Z-Score using the formula:</p>
+                <div class="center-content">
+                  <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+                </div>
+                <p>Substitute the values:</p>
+                <div class="center-content">
+                  <p>\[ z = \frac{165 - 160}{8} = \frac{5}{8} = 0.625 \]</p>
+                </div>
+                <img src="https://cdn.prod.website-files.com/6634a8f8dd9b2a63c9e6be83/669d62f2842c5df99b62612a_z-score-table-1.png" alt="Z-Score Table" style="max-width: 100%; height: auto;">
+                <img src="https://cdn.prod.website-files.com/6634a8f8dd9b2a63c9e6be83/669d62f2842c5df99b626142_z-score-table-2.png" alt="Z-Score Table" style="max-width: 100%; height: auto;">
+                <br><br>
+                <p>Using the Z-Score table above, a Z-Score of 0.625 corresponds to a Cumulative Probability that lies between 0.7234 and 0.7357. Averaging these two values:</p>
+                <div class="center-content">
+                  <p>\[ \frac{0.7234 + 0.7357}{2} = 0.734 \]</p>
+                </div>
+                <p>This gives a Cumulative Probability of approximately 0.734, meaning the Probability that a woman will be shorter than Alex is 0.734.</p>
+                <p>To find the Probability that a woman will be taller than Alex, subtract this Cumulative Probability from 1:</p>
+                <div class="center-content">
+                  <p>\[ P(\text{taller than Alex}) = 1 - P(\text{shorter than Alex}) = 1 - 0.734 = 0.266 \]</p>
+                </div>
+                <p>Therefore, the Probability that a woman will be taller than Alex is approximately 0.266.</p>
+              </div>
+              <br><br>
+              <hr>
+              <div class="well well-sm">
+                <p>A group of 120 students participated in a science quiz. The Average Score was 72% with a Standard Deviation of 6%. Determine the Percentile Rank of each of the following students:</p>
+                <ol type="I">
+                  <li>Emily, who scored 85%</li>
+                  <li>Ryan, who scored 62%</li>
+                  <li>Sophia, who scored 95%</li>
+                </ol>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example11">Show Answer</span>
+                <div id="example11" class="hidden-answer" style="display: none">
+                  <div>
+                    <p>Given Information:</p>
+                    <ul>
+                      <li>Mean Score: \( \mu = 72\% \)</li>
+                      <li>Standard Deviation: \( \sigma = 6\% \)</li>
+                      <li>Number of students: 120</li>
+                    </ul>
+                    <p>Calculate the Z-Score for each student using the formula:</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+                    </div>
+                    <p>I. Emily, who scored 85%</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{85 - 72}{6} = \frac{13}{6} = 2.17 \]</p>
+                    </div>
+                    <p>Using the Z-Score table from the earlier example, a Z-Score of 2.17 corresponds to a Cumulative Probability of approximately 0.9850, meaning Emily’s Percentile Rank is 98.50%.</p>
+                    <p>II. Ryan, who scored 62%</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{62 - 72}{6} = \frac{-10}{6} = -1.67 \]</p>
+                    </div>
+                    <p>Using the Z-Score table from the earlier example, a Z-Score of -1.67 corresponds to a Cumulative Probability of approximately 0.0475, meaning Ryan’s Percentile Rank is 4.75%.</p>
+                    <p>III. Sophia, who scored 95%</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{95 - 72}{6} = \frac{23}{6} = 3.83 \]</p>
+                    </div>
+                    <p>Using the Z-Score table from the earlier example, a Z-Score of 3.83 corresponds to a Cumulative Probability of approximately 0.9999 (since it’s extremely high and close to 1), meaning Sophia’s Percentile Rank is 99.99%.</p>
+                    <p>Therefore, the final Answers are:</p>
+                    <ul>
+                      <li>I. Emily’s Percentile Rank is 98.50%.</li>
+                      <li>II. Ryan’s Percentile Rank is 4.75%.</li>
+                      <li>III. Sophia’s Percentile Rank is 99.99%.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <br><br>
+              <hr>
+              <div class="well well-sm">
+                <p>The weights of apples in a grocery store are Normally Distributed with a Mean of 150 grams and a Standard Deviation of 20 grams. What is the Probability that an apple weighs between 130 grams and 180 grams?</p>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example12">Show Answer</span>
+                <div id="example12" class="hidden-answer" style="display: none">
+                  <div>
+                    <p>Given Information:</p>
+                    <ul>
+                      <li>Mean Weight: \( \mu = 150 \) grams</li>
+                      <li>Standard Deviation: \( \sigma = 20 \) grams</li>
+                      <li>Range: \( x_1 = 130 \) grams to \( x_2 = 180 \) grams</li>
+                    </ul>
+                    <p>Calculate the Z-Scores for the bounds using the formula:</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+                    </div>
+                    <p>For \( x_1 = 130 \) grams:</p>
+                    <div class="center-content">
+                      <p>\[ z_1 = \frac{130 - 150}{20} = \frac{-20}{20} = -1.00 \]</p>
+                    </div>
+                    <p>For \( x_2 = 180 \) grams:</p>
+                    <div class="center-content">
+                      <p>\[ z_2 = \frac{180 - 150}{20} = \frac{30}{20} = 1.50 \]</p>
+                    </div>
+                    <p>Using the Z-Score table from the earlier example:</p>
+                    <ul>
+                      <li>A Z-Score of -1.00 corresponds to a Cumulative Probability of 0.1587.</li>
+                      <li>A Z-Score of 1.50 corresponds to a Cumulative Probability of 0.9332.</li>
+                    </ul>
+                    <p>Calculate the Probability between these Z-Scores:</p>
+                    <div class="center-content">
+                      <p>\[ P(130 < x < 180) = P(z_2) - P(z_1) = 0.9332 - 0.1587 = 0.7745 \]</p>
+                    </div>
+                    <p>Therefore, the Probability that an apple weighs between 130 grams and 180 grams is approximately 0.7745, or 77.45%.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Normal Sampling and Modelling</a></li>
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Normal Approximation to the Binomial Distribution</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

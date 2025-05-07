@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Probability Distributions",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-07-02",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Probability Distributions in statistics and their types, including discrete and continuous distributions.">
+    <title>Hypergeometric Distributions</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .list-group-item { border: 0px solid black; }
+        .breadcrumb { background-color: #5B0A9F; }
+        .breadcrumb > li > a { color: white; }
+        .well { background-color: #DCC4F8; }
+        .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+        .panel-default > .panel-heading { background-color: #DCC4F8; }
+        h1, h2, h3 { font-family: lucida sans; }
+        .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top:80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php");?>
+
+    <div class="container-fluid" style="margin-bottom:30px;">
+      <br><br>
+      <div class="row">            
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="">Lessons</a></li>
+            <li><a href="">Gr12</a></li>
+            <li><a href="">Math</a></li>
+            <li><a href="">Calculus and Vectors</a></li>
+            <li><a href="" style="font-weight:bold;">Hypergometric Distributions</a></li>
+          </ol>            
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1>Hypergometric distribution </h1>
+              <p>A hypergeometric distribution models situations where you have a fixed number of items, and you are selecting a certain number of them without replacement. Each item has two possible categories, often referred to as successes and failures. The key part of a hypergeometric distribution is that the probability of success changes as you select items, because you are not replacing them so that means that the number of items and successes left in the pool decreases with each trial.</p>
+              <p><b>Key thing to remember when working with Hypergeometric distributions is:</b></p>
+              <ul>
+                <li><b>Fixed Group:</b> You always start with a fixed number of items.</li>
+                <li><b>Two type:</b> The items always fall into two categories which are the successes and failures</li>
+                <li><b>No replacement:</b> After you pick an item, it’s not put back, so the group keeps getting smaller.</li>
+                <li><b>Changing Odds:</b> The chance of picking a certain type of item changes as you pick more items because you're not replacing them.</li>
+              </ul>
+              <p><b>Expectation for a Hypergeometric Distribution:</b></p>
+              <p>The expectation of a geometric distribution is the sum of an infinite series. In a geometric distribution, the number of trials until the first success can theoretically extend infinitely, meaning each additional trial adds more possible outcomes to the failures before the first success occurs.</p>
+              <div class="box">
+                <h3>Probability in a Hypergeometric Distribution</h3>
+                <p class="text">
+                  \[ P(x) = \frac{\binom{a}{x} \times \binom{n-a}{r-x}}{\binom{n}{r}}, \]
+                  where \( a \) is the number of successful outcomes among a total of \( n \) possible outcomes.
+                </p>
+              </div>
+              <p class="text">
+                Even though the trials depend on each other, the average chance of success should still be similar to the proportion of successes in the whole population, \( \frac{a}{n} \). which is a/n (where \(a\) is the number of successes and \(n\) is the total population).
+              </p>
+              <div class="box">
+                <h3>Expectation for a Hypergeometric Distribution</h3>
+                <p class="text">
+                  \[ E(X) = \frac{r \cdot a}{n} \]
+                  <p>which represents the <b>average number</b> of successes in a sample of size \(r\) drawn from a finite population of size \(n\) containing \(a\) successes. We use this formula because it accounts for <b>sampling without replacement</b>, where each selection affects the probability of future selections, unlike the Binomial Distribution.</p>
+                </p>
+              </div>
+              <div class="well well-sm">
+                <p>A quality control inspector randomly selects <b>5 light bulbs</b> from a batch of <b>20</b>, where <b>6 bulbs are defective</b>. What is the probability that exactly <b>2</b> of the selected bulbs are defective?</p>
+              </div>
+              <div style="display: block;">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example12">Show Answer</span>
+                <div id="example12" class="hidden-answer" style="display: none;">
+                  <div>
+                    <p>Using <b>Hypergeometric Distribution Formula</b>:)
+                      \[ P(X = k) = \frac{\binom{a}{k} \binom{n-a}{r-k}}{\binom{n}{r}} \]
+                      where \( a = 6 \), \( n = 20 \), \( r = 5 \), and \( k = 2 \).</p>
+                    <h3>Solution:</h3>
+                    <p>
+                      We need to calculate the probability using:
+                      \[ P(X = 2) = \frac{\binom{6}{2} \binom{14}{3}}{\binom{20}{5}} \]
+                      First, compute the binomial coefficients:
+                      \[\binom{6}{2} = \frac{6!}{2!(6-2)!} = \frac{6 \times 5}{2 \times 1} = 15\]
+                      \[\binom{14}{3} = \frac{14!}{3!(14-3)!} = \frac{14 \times 13 \times 12}{3 \times 2 \times 1} = 364\]
+                      \[\binom{20}{5} = \frac{20!}{5!(20-5)!} = \frac{20 \times 19 \times 18 \times 17 \times 16}{5 \times 4 \times 3 \times 2 \times 1} = 15504\]
+                      Now, plug in the values:
+                      \[ P(X = 2) = \frac{15 \times 364}{15504} = \frac{5460}{15504} \approx 0.352\]
+                      So, the probability of selecting exactly 2 defective bulbs is <b>0.352 (or 35.2%)</b>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="well well-sm">
+                <p>A deck of <b>52 playing cards</b> contains <b>13 hearts</b>. If you randomly draw <b>10</b> cards without replacement, what is the expected number of hearts in your selection?</p>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example11">Show Answer</span>
+                <div id="example11" class="hidden-answer" style="display: none">
+                  <p>(Hint: Use the expectation formula for a <b>Hypergeometric Distribution</b>:)
+                    \[ E(X) = r \times \frac{a}{n} \]
+                    where \( r = 10 \), \( a = 13 \), and \( n = 52 \).</p>
+                  <h3>Solution:</h3>
+                  <p>
+                    Using the expectation formula:
+                    \[ E(X) = 10 \times \frac{13}{52} \]
+                    \[ E(X) = 10 \times \frac{1}{4} = 2.5 \]
+                    So, the expected number of hearts in the sample is <b>2.5</b>.
+                  </p>
+                </div>
+              </div>
+              <br><br>
+              <hr>
+
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h5 class="text-center">Review these lessons:</h5>
+                    </div>
+                    <div class="panel-body">
+                      <ul class="list-group">
+                        <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href=""></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h5 class="text-center">Try these questions:</h5>
+                    </div>
+                    <div class="panel-body">
+                      <ul class="list-group">
+                        <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="" target="_blank"></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

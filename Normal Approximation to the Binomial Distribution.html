@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Normal Approximation to the Binomial Distribution",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-02-28",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Properties of the Normal Distribution in Statistics, a Key Continuous Probability Distribution">
+    <title>Normal Approximation</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .list-group-item { border: 0px solid black; }
+      .breadcrumb { background-color: #5B0A9F; }
+      .breadcrumb > li > a { color: white; }
+      .well { background-color: #DCC4F8; }
+      .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+      .panel-default > .panel-heading { background-color: #DCC4F8; }
+      h1 { font-family: lucida sans; }
+      h2 { font-family: lucida sans; }
+      h3 { font-family: lucida sans; }
+      .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top:80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php"); ?>
+
+    <div class="container-fluid" style="margin-bottom:30px;">
+      <br><br>
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="">Lessons</a></li>
+            <li><a href="">Gr12</a></li>
+            <li><a href="">Math</a></li>
+            <li><a href="">Calculus and Vectors</a></li>
+            <li><a href="" style="font-weight:bold;">Normal Approximation</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1>Normal Approximation</h1>
+              <p>
+                The <b>normal approximation</b> to the <b>binomial distribution</b> helps us estimate <b>binomial probabilities</b> using a <b>continuous normal distribution</b>. The <b>binomial distribution</b> describes the number of <b>successes</b> in a fixed number of <b>independent trials</b>, each with the same <b>probability of success</b> (p). However, calculating probabilities for a large number of trials (<b>n</b>) can be complex. By using the <b>normal distribution</b> as an approximation, it <b>simplifies</b> these calculations. The normal approximation to the binomial distribution is possible when the number of <b>trials (n)</b> is sufficiently large and both <b>np</b> and <b>nq</b> (where <b>q = 1 - p</b>) are greater than 5.
+              </p>
+              <br><br>
+              <p>Furthermore, since the <b>binomial distribution</b> is <b>discrete</b> and the <b>normal distribution</b> is <b>continuous</b>, we use a <b>continuity correction</b>. This simply means adding or subtracting <b>0.5</b> to account for the difference between <b>discrete</b> and <b>continuous data</b>.</p>
+              <br><br>
+              <h2>Formulas</h2>
+              <p>The mean of the binomial distribution is calculated as follows:</p>
+              <div class="center-content">
+                <p>\[ \mu = np \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( \mu \) is the mean of the binomial distribution.</li>
+                <li>\( n \) is the number of trials.</li>
+                <li>\( p \) is the probability of success on a single trial.</li>
+              </ul>
+              <p>The standard deviation of the binomial distribution is found using this formula:</p>
+              <div class="center-content">
+                <p>\[ \sigma = \sqrt{npq} \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( \sigma \) is the standard deviation of the binomial distribution.</li>
+                <li>\( n \) is the number of trials.</li>
+                <li>\( p \) is the probability of success on a single trial.</li>
+                <li>\( q = 1 - p \), the probability of failure.</li>
+              </ul>
+              <p>The Z-Score converts a binomial value to a standard normal value with this equation:</p>
+              <div class="center-content">
+                <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( z \) is the z-score (standardized value).</li>
+                <li>\( x \) is the observed value (e.g., number of successes).</li>
+                <li>\( \mu \) is the population mean.</li>
+                <li>\( \sigma \) is the population standard deviation.</li>
+              </ul>
+              <br><br>
+              <hr>
+              <p><b>Example:</b></p>
+              <p>A coin is flipped 30 times. What is the <b>probability</b> of getting exactly 15 heads using the <b>normal approximation</b> to the <b>binomial distribution</b>? (Let \( p = 0.5 \))</p>
+              <div>
+                <p>Identify the given information:</p>
+                <ul>
+                  <li>Number of trials: \( n = 30 \)</li>
+                  <li>Probability of success: \( p = 0.5 \)</li>
+                  <li>Probability of failure: \( q = 1 - p = 0.5 \)</li>
+                  <li>Observed number of successes: \( x = 15 \)</li>
+                </ul>
+                <p>Calculate the <b>mean</b> and <b>standard deviation</b> using the formulas:</p>
+                <div class="center-content">
+                  <p>\[ \mu = np = 30 \times 0.5 = 15 \]</p>
+                  <p>\[ \sigma = \sqrt{npq} = \sqrt{30 \times 0.5 \times 0.5} = \sqrt{7.5} \approx 2.738 \]</p>
+                </div>
+                <p>Since we are looking for exactly 15 heads, we apply the <b>continuity correction</b> and adjust the interval to 14.5 to 15.5.</p>
+                <p>Calculate the <b>z-scores</b> using the formula:</p>
+                <div class="center-content">
+                  <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+                </div>
+                <p>Substitute the values:</p>
+                <div class="center-content">
+                  <p>\[ z_{14.5} = \frac{14.5 - 15}{2.738} = \frac{-0.5}{2.738} \approx -0.183 \]</p>
+                  <p>\[ z_{15.5} = \frac{15.5 - 15}{2.738} = \frac{0.5}{2.738} \approx 0.183 \]</p>
+                </div>
+                <img src="https://cdn.prod.website-files.com/6634a8f8dd9b2a63c9e6be83/669d62f2842c5df99b62612a_z-score-table-1.png" alt="Z-Score Table" style="max-width: 100%; height: auto;">
+                <img src="https://cdn.prod.website-files.com/6634a8f8dd9b2a63c9e6be83/669d62f2842c5df99b626142_z-score-table-2.png" alt="Z-Score Table" style="max-width: 100%; height: auto;">
+                <br><br>
+                <p>Using the <b>z-score table</b> above, since 0.183 is close to 0.18, we use these values. A <b>z-score</b> of 0.18 corresponds to a cumulative probability of approximately 0.5717, and a <b>z-score</b> of -0.18 corresponds to approximately 0.4286.</p>
+                <p>This gives a cumulative probability from \( z = -0.183 \) to \( z = 0.183 \). To find the <b>probability</b> between these values, subtract the lower cumulative probability from the upper:</p>
+                <div class="center-content">
+                  <p>\[ P(14.5 \leq X \leq 15.5) = P(Z < 0.183) - P(Z < -0.183) = 0.5717 - 0.4286 = 0.1431 \]</p>
+                </div>
+                <p>Therefore, the <b>probability</b> of getting exactly 15 heads is approximately 0.143, or 14.3%.</p>
+              </div>
+              <br><br>
+              <hr>
+              <div class="well well-sm">
+                <p>A survey shows that 40% of people prefer chocolate ice cream. In a random sample of 100 people, what is the probability that between 35 and 45 people (inclusive) prefer chocolate ice cream? Use the normal approximation to the binomial distribution.</p>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example2">Show Answer</span>
+                <div id="example2" class="hidden-answer" style="display: none">
+                  <div>
+                    <p>Identify the given information:</p>
+                    <ul>
+                      <li>Number of trials: \( n = 100 \)</li>
+                      <li>Probability of success: \( p = 0.4 \)</li>
+                      <li>Probability of failure: \( q = 1 - p = 0.6 \)</li>
+                    </ul>
+                    <p>Calculate the <b>mean</b> and <b>standard deviation</b> using the formulas:</p>
+                    <div class="center-content">
+                      <p>\[ \mu = np = 100 \times 0.4 = 40 \]</p>
+                      <p>\[ \sigma = \sqrt{npq} = \sqrt{100 \times 0.4 \times 0.6} = \sqrt{24} \approx 4.899 \]</p>
+                    </div>
+                    <p>Since we are looking for between 35 and 45 people (inclusive), we apply the <b>continuity correction</b> and adjust the interval to 34.5 to 45.5.</p>
+                    <p>Calculate the <b>z-scores</b> using the formula:</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+                    </div>
+                    <p>Substitute the values:</p>
+                    <div class="center-content">
+                      <p>\[ z_{34.5} = \frac{34.5 - 40}{4.899} = \frac{-5.5}{4.899} \approx -1.123 \]</p>
+                      <p>\[ z_{45.5} = \frac{45.5 - 40}{4.899} = \frac{5.5}{4.899} \approx 1.123 \]</p>
+                    </div>
+                    <p>Using the <b>z-score table</b> from Example, since 1.123 is close to 1.12, we use these values. A <b>z-score</b> of 1.12 corresponds to a cumulative probability of approximately 0.8686, and a <b>z-score</b> of -1.12 corresponds to approximately 0.1314.</p>
+                    <p>This gives a cumulative probability from \( z = -1.123 \) to \( z = 1.123 \). To find the <b>probability</b> between these values, subtract the lower cumulative probability from the upper:</p>
+                    <div class="center-content">
+                      <p>\[ P(34.5 \leq X \leq 45.5) = P(Z < 1.123) - P(Z < -1.123) = 0.8686 - 0.1314 = 0.7372 \]</p>
+                    </div>
+                    <p>Therefore, the <b>probability</b> that between 35 and 45 people prefer chocolate ice cream is approximately 0.737, or 73.7%.</p>
+                  </div>
+                </div>
+              </div>
+              <br><br>
+              <hr>
+              <div class="well well-sm">
+                <p>A company produces light bulbs, and 2% of them are defective. If 500 light bulbs are selected at random, what is the probability that between 8 and 12 bulbs (inclusive) are defective, using the normal approximation to the binomial distribution? Apply the continuity correction where necessary.</p>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example3">Show Answer</span>
+                <div id="example3" class="hidden-answer" style="display: none">
+                  <div>
+                    <p>Identify the given information:</p>
+                    <ul>
+                      <li>Number of trials: \( n = 500 \)</li>
+                      <li>Probability of success (defective): \( p = 0.02 \)</li>
+                      <li>Probability of failure: \( q = 1 - p = 0.98 \)</li>
+                    </ul>
+                    <p>Calculate the <b>mean</b> and <b>standard deviation</b> using the formulas:</p>
+                    <div class="center-content">
+                      <p>\[ \mu = np = 500 \times 0.02 = 10 \]</p>
+                      <p>\[ \sigma = \sqrt{npq} = \sqrt{500 \times 0.02 \times 0.98} = \sqrt{9.8} \approx 3.130 \]</p>
+                    </div>
+                    <p>Since we are looking for between 8 and 12 defective bulbs (inclusive), we apply the <b>continuity correction</b> and adjust the interval to 7.5 to 12.5.</p>
+                    <p>Calculate the <b>z-scores</b> using the formula:</p>
+                    <div class="center-content">
+                      <p>\[ z = \frac{x - \mu}{\sigma} \]</p>
+                    </div>
+                    <p>Substitute the values:</p>
+                    <div class="center-content">
+                      <p>\[ z_{7.5} = \frac{7.5 - 10}{3.130} = \frac{-2.5}{3.130} \approx -0.799 \]</p>
+                      <p>\[ z_{12.5} = \frac{12.5 - 10}{3.130} = \frac{2.5}{3.130} \approx 0.799 \]</p>
+                    </div>
+                    <p>Using the <b>z-score table</b> from Example, since 0.799 is close to 0.80, we use these values. A <b>z-score</b> of 0.80 corresponds to a cumulative probability of approximately <b>0.7881</b>, and a <b>z-score</b> of -0.80 corresponds to approximately <b>0.2119</b>.</p>
+                    <p>This gives a cumulative probability from \( z = -0.799 \) to \( z = 0.799 \). To find the <b>probability</b> between these values, subtract the lower cumulative probability from the upper:</p>
+                    <div class="center-content">
+                      <p>\[ P(7.5 \leq X \leq 12.5) = P(Z < 0.799) - P(Z < -0.799) = 0.7881 - 0.2119 = 0.5762 \]</p>
+                    </div>
+                    <p>Therefore, the <b>probability</b> that between 8 and 12 bulbs are defective is approximately 0.576, or 57.6%.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Properties of the Normal Distribution</a></li>
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Normal Sampling and Modelling</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>

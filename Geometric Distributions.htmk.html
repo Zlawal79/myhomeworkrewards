@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Course",
+        "courseCode": "",
+        "name": "Geometric Distributions",
+        "provider": {
+          "@type": "HighSchool",
+          "name": "MyHomeworkRewards",
+          "url": ""
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "4",
+          "ratingCount": "1",
+          "reviewCount": "1"
+        },
+        "datePublished": "2025-02-28",
+        "author": {"@type": "Person", "name": "Zainab Lawal"},
+        "publisher": {"@type": "Organization", "name": "Admin"}
+      }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Geometric Distributions in Statistics, a Type of Probability Distribution for Discrete Trials Until First Success.">
+    <title>Geometric Distributions</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .list-group-item { border: 0px solid black; }
+        .breadcrumb { background-color: #5B0A9F; }
+        .breadcrumb > li > a { color: white; }
+        .well { background-color: #DCC4F8; }
+        .panel-primary > .panel-heading { background-color: #DCC4F8; color: black; }
+        .panel-default > .panel-heading { background-color: #DCC4F8; }
+        h1 { font-family: lucida sans; }
+        h2 { font-family: lucida sans; }
+        h3 { font-family: lucida sans; }
+        .center-content { text-align: center; }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </head>
+
+  <body style="padding-top:80px;">
+    <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/header.php");?>
+
+    <div class="container-fluid" style="margin-bottom:30px;">
+      <br><br>
+      <div class="row">            
+        <div class="col-lg-8 col-lg-offset-2">
+          <ol class="breadcrumb">
+            <li><a href="">Lessons</a></li>
+            <li><a href="">Gr12</a></li>
+            <li><a href="">Math</a></li>
+           <li><a href="#">Data Management</a></li>
+            <li><a href="" style="font-weight:bold;">Geometric Distributions</a></li>
+          </ol>            
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="row">
+            <div class="col-lg-9">
+              <h1>Geometric Distributions</h1>
+              <p>A <b>Geometric Distribution</b> is a type of Probability Distribution that tells us how many Failures happen before the first Success in a series of independent Trials. Each Trial has only two possible outcomes: Success or Failure, and the Probability of Success stays the same for each Trial.</p>
+              <p><b>Key Things to Remember When Working with Geometric Distributions:</b></p>
+              <ul>
+                <li>It counts the number of Failures before the first Success.</li>
+                <li>Each Trial is independent, meaning the outcome of one does not affect the next.</li>
+                <li>The Probability of Success is constant in each Trial.</li>
+              </ul>
+              <hr>
+
+              <p><b>Probability in a Geometric Distribution:</b></p>
+              <p>The formula for the Geometric Distribution comes from the way we model the number of Trials, which is the Failures that are needed before a Success occurs.</p>
+              <div class="center-content">
+                \[ P(\text{x}) = q^{\text{x}} \cdot p \]
+              </div>
+              <p>Where:</p>
+              <ul>
+                <li>\( p \) is the Probability of Success in each single Trial.</li>
+                <li>\( q \) is the Probability of Failure.</li>
+                <li>\( \text{x} \) is the number of Failures before the first Success.</li>
+              </ul>
+              <br>
+              <hr>
+
+              <p><b>Expectation for a Geometric Distribution:</b></p>
+              <p>The Expectation of a Geometric Distribution is the sum of an infinite series. In a Geometric Distribution, the number of Trials until the first Success can theoretically extend infinitely, meaning each additional Trial adds more possible outcomes to the Failures before the first Success occurs.</p>
+              <p>The Expected Number of Failures is given by:</p>
+              <div class="center-content">
+                \[ E(\text{X}) = \sum_{\text{x}=0}^{\infty} \text{x} P(\text{x}) \]
+                \[ = \dfrac{q}{p} \]
+              </div>
+              <br>
+              <hr>
+
+              <p><b>Example:</b> A player is rolling a fair 8-sided die, where each face has an equal Probability of appearing. The player continues rolling until they land on a 7 for the first time.</p>
+              <p>What is the Probability that the player rolls the die and does not roll a 7 exactly four times before finally rolling a 7?</p>
+              <div>
+                <p>What do we know:</p>
+                <div class="center-content">
+                  <p>\[ P(\text{x}) = q^{\text{x}} \cdot p \]</p>
+                </div>
+                  <div>
+                  <p>The Probability of rolling a 7 is:</p>
+                  <p> <center>\( p = \dfrac{1}{8} \).</center></p>
+                </div>
+                <p>This is due to the fact that a die has 8 sides and only one of them is a 7, the chance of landing on that 7 would be a 1 out of 8.</p>
+                <p>The Probability of not rolling a 7 is:</p>
+                <div class="center-content">
+                  <p>\( q = 1 - p = \dfrac{7}{8} \)</p>
+                </div>
+                <p>The number of Failures before Success is:</p>
+                <div class="center-content">
+                  <p>\( \text{x} = 4 \)</p>
+                  <p>\( P(4) = \left( \dfrac{7}{8} \right)^4 \times \dfrac{1}{8} = \dfrac{2401}{4096} \times \dfrac{1}{8} = \dfrac{2401}{32768} \approx 0.0733 \)</p>
+                </div>
+                <p>Therefore, the Probability of having exactly 4 Failures before the first Success is approximately 0.0733.</p>
+              </div>
+              <hr>
+
+              <div class="well well-sm">
+                <p>You are rolling a fair 6-sided die. Let’s define a Success as rolling a 6.</p>
+                <p>What is the Expected Number of rolls required until you roll a 6 for the first time?</p>
+              </div>
+              <div style="display: block">
+                <span class="show-answer collapsed" style="cursor: pointer; text-decoration: underline;" data-target="example11">Show Answer</span>
+                <div id="example11" class="hidden-answer" style="display: none">
+                  <div>
+                    <p>Where:</p>
+                    <p>\( p \) is the Probability of rolling a 6, which is Success:</p>
+                    <div class="center-content">
+                      <p>\( p = \dfrac{1}{6} \)</p>
+                    </div>
+                    <p>The Probability of not rolling a 6, which is the Failure, is:</p>
+                    <div class="center-content">
+                      <p>\( q = 1 - p = \dfrac{5}{6} \)</p>
+                    </div>
+                    <p>The Expected Number of rolls until the first Success (including the Success) is:</p>
+                    <div class="center-content">
+                      <p>\( E(\text{X}) = \dfrac{1}{p} = \dfrac{1}{\dfrac{1}{6}} = 6 \)</p>
+                    </div>
+                    <p>Therefore, the Expected Number of rolls required until the first 6 is 6.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Review These Lessons:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Binomial Distributions</a></li>
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="">Probability Distributions</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h5 class="text-center">Try These Questions:</h5>
+                </div>
+                <div class="panel-body">
+                  <ul class="list-group">
+                    <li class="list-group-item" style="padding:0px 0px 10px 0px;"><a href="" target="_blank"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php include_once($_SERVER['DOCUMENT_ROOT']."/lessons/footer.php"); ?>
+    </div>
+
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript" src="hide_answer.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>
